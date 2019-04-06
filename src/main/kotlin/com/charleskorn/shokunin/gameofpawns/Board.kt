@@ -23,21 +23,3 @@ class Board private constructor(val ranks: List<List<BoardSquare>>) {
         }
     }
 }
-
-sealed class BoardSquare
-object EmptySquare : BoardSquare()
-data class OccupiedSquare(val player: Player, val piece: Piece) : BoardSquare()
-
-enum class Player {
-    White,
-    Black
-}
-
-enum class Piece {
-    King,
-    Queen,
-    Rook,
-    Knight,
-    Bishop,
-    Pawn
-}
