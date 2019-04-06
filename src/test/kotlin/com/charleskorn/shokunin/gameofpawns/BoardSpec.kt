@@ -6,7 +6,6 @@ import ch.tutteli.atrium.api.cc.en_GB.toBe
 import ch.tutteli.atrium.verbs.assert
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
-import sun.invoke.empty.Empty
 
 object BoardSpec : Spek({
     describe("a chess board") {
