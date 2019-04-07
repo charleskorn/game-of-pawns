@@ -16,3 +16,4 @@ For a plain text chess board:
 
 `./go.sh --grid`
 
+`go.sh` will automatically download any missing dependencies and compile the application if required.
