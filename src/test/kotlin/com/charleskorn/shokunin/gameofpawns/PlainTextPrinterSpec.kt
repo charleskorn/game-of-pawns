@@ -112,5 +112,37 @@ object PlainTextPrinterSpec : Spek({
                 """.trimIndent())
             }
         }
+
+        describe("given a board matching the sample given") {
+            val board = Board()
+                    .withPiece(7, 3, Player.White, Piece.Queen)
+                    .withPiece(7, 6, Player.Black, Piece.Bishop)
+                    .withPiece(5, 0, Player.White, Piece.Rook)
+                    .withPiece(5, 3, Player.Black, Piece.Bishop)
+                    .withPiece(5, 6, Player.Black, Piece.Rook)
+                    .withPiece(4, 4, Player.Black, Piece.Queen)
+                    .withPiece(4, 7, Player.White, Piece.King)
+                    .withPiece(3, 4, Player.White, Piece.Pawn)
+                    .withPiece(2, 1, Player.White, Piece.Bishop)
+                    .withPiece(2, 2, Player.Black, Piece.King)
+                    .withPiece(2, 3, Player.White, Piece.Pawn)
+                    .withPiece(1, 1, Player.Black, Piece.Knight)
+                    .withPiece(0, 3, Player.White, Piece.Knight)
+
+            val printed = printer.print(board)
+
+            it("prints the board as an 8x8 grid matching the sample given") {
+                assert(printed).toBe("""
+                    .  .  .  Q  .  .  b  .
+                    .  .  .  .  .  .  .  .
+                    R  .  .  b  .  .  r  .
+                    .  .  .  .  q  .  .  K
+                    .  .  .  .  P  .  .  .
+                    .  B  k  P  .  .  .  .
+                    .  n  .  .  .  .  .  .
+                    .  .  .  N  .  .  .  .
+                """.trimIndent())
+            }
+        }
     }
 })
