@@ -60,6 +60,26 @@ object AppSpec : Spek({
             }
         }
 
+        describe("given the single argument '--pretty'") {
+            val args = arrayOf("--pretty")
+            val output = ByteArrayOutputStream()
+            val error = ByteArrayOutputStream()
+
+            val exitCode = runApplication(args, PrintStream(output), PrintStream(error))
+
+            it("exits with a zero exit code") {
+                assert(exitCode).toBe(0)
+            }
+
+            it("prints a pretty-printed board to stdout") {
+                assert(output.toString()).contains.exactly(64).regex("""[\u2654-\u265F]\s|\s\s""")
+            }
+
+            it("prints nothing to stderr") {
+                assert(error.toString()).toBe("")
+            }
+        }
+
         mapOf(
                 "given another argument" to arrayOf("--something"),
                 "given multiple arguments" to arrayOf("--fen", "--grid")
@@ -79,7 +99,7 @@ object AppSpec : Spek({
                 }
 
                 it("prints nothing to stderr") {
-                    assert(error.toString()).toBe("Error: this application takes at most one argument, either --grid or --fen.\n")
+                    assert(error.toString()).toBe("Error: this application takes at most one argument, either --grid, --fen or --pretty.\n")
                 }
             }
         }

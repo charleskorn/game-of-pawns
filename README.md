@@ -10,12 +10,27 @@ The April TW Shokunin challenge: generate a semi-realistic random chess board ac
 
 ## Usage
 
-For a FEN-formatted chess board:
+For a FEN-formatted chess board, run `./go.sh --fen`. This produces output like:
 
-`./go.sh --fen`
+```
+4K3/6N1/2n1P3/P7/2p3k1/3R4/2P5/2P5 w - - 0 1
+```
 
-For a plain text chess board:
+For a plain text chess board, run `./go.sh --grid`. This produces output like:
 
-`./go.sh --grid`
+```
+.  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .
+.  .  .  k  .  .  .  K
+N  .  .  .  .  .  n  .
+.  .  .  r  .  .  .  .
+.  N  .  .  n  .  .  .
+P  .  r  .  .  .  .  .
+.  .  .  .  .  P  R  .
+```
+
+For a pretty-printed chess board, run `./go.sh --pretty`. This produces output like the following on a supported terminal:
+
+![Pretty print example](docs/pretty.png)
 
 `go.sh` will automatically download any missing dependencies and compile the application if required.

@@ -1,6 +1,7 @@
 package com.charleskorn.shokunin.gameofpawns
 
 import com.charleskorn.shokunin.gameofpawns.printing.BoardPrinter
+import com.charleskorn.shokunin.gameofpawns.printing.PrettyPrinter
 import com.charleskorn.shokunin.gameofpawns.printing.FENPrinter
 import com.charleskorn.shokunin.gameofpawns.printing.PlainTextPrinter
 import java.io.PrintStream
@@ -18,6 +19,7 @@ fun runApplication(args: Array<String>, out: PrintStream, err: PrintStream): Int
     when (args.firstOrNull()) {
         "--grid" -> printRandomBoard(PlainTextPrinter(), out)
         "--fen", null -> printRandomBoard(FENPrinter(), out)
+        "--pretty" -> printRandomBoard(PrettyPrinter(), out)
         else -> return showArgsErrorAndExit(err)
     }
 
@@ -25,7 +27,7 @@ fun runApplication(args: Array<String>, out: PrintStream, err: PrintStream): Int
 }
 
 private fun showArgsErrorAndExit(err: PrintStream): Int {
-    err.println("Error: this application takes at most one argument, either --grid or --fen.")
+    err.println("Error: this application takes at most one argument, either --grid, --fen or --pretty.")
 
     return -1
 }
