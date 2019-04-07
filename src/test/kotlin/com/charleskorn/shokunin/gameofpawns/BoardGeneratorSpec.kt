@@ -10,6 +10,11 @@ import ch.tutteli.atrium.api.cc.en_GB.property
 import ch.tutteli.atrium.api.cc.en_GB.toBe
 import ch.tutteli.atrium.creating.Assert
 import ch.tutteli.atrium.verbs.assert
+import com.charleskorn.shokunin.gameofpawns.model.Board
+import com.charleskorn.shokunin.gameofpawns.model.Coordinates
+import com.charleskorn.shokunin.gameofpawns.model.OccupiedSquare
+import com.charleskorn.shokunin.gameofpawns.model.Piece
+import com.charleskorn.shokunin.gameofpawns.model.Player
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
 import java.util.Random

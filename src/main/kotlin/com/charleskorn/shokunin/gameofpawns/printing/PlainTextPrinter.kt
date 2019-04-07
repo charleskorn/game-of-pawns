@@ -1,4 +1,10 @@
-package com.charleskorn.shokunin.gameofpawns
+package com.charleskorn.shokunin.gameofpawns.printing
+
+import com.charleskorn.shokunin.gameofpawns.model.Board
+import com.charleskorn.shokunin.gameofpawns.model.BoardSquare
+import com.charleskorn.shokunin.gameofpawns.model.EmptySquare
+import com.charleskorn.shokunin.gameofpawns.model.OccupiedSquare
+import com.charleskorn.shokunin.gameofpawns.model.Player
 
 class PlainTextPrinter : BoardPrinter {
     override fun print(board: Board): String {

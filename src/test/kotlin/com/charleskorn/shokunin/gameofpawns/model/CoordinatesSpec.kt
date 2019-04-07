@@ -1,4 +1,4 @@
-package com.charleskorn.shokunin.gameofpawns
+package com.charleskorn.shokunin.gameofpawns.model
 
 import ch.tutteli.atrium.api.cc.en_GB.toBe
 import ch.tutteli.atrium.verbs.assert

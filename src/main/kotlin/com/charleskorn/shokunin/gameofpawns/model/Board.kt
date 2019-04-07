@@ -1,4 +1,4 @@
-package com.charleskorn.shokunin.gameofpawns
+package com.charleskorn.shokunin.gameofpawns.model
 
 class Board private constructor(val ranks: List<List<BoardSquare>>) {
     constructor() : this(List(8) {

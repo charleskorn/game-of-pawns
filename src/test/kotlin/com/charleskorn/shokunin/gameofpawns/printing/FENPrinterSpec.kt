@@ -1,7 +1,10 @@
-package com.charleskorn.shokunin.gameofpawns
+package com.charleskorn.shokunin.gameofpawns.printing
 
 import ch.tutteli.atrium.api.cc.en_GB.toBe
 import ch.tutteli.atrium.verbs.assert
+import com.charleskorn.shokunin.gameofpawns.model.Board
+import com.charleskorn.shokunin.gameofpawns.model.Piece
+import com.charleskorn.shokunin.gameofpawns.model.Player
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
 

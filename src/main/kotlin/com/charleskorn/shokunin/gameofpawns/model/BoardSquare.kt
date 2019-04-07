@@ -1,4 +1,4 @@
-package com.charleskorn.shokunin.gameofpawns
+package com.charleskorn.shokunin.gameofpawns.model
 
 sealed class BoardSquare
 object EmptySquare : BoardSquare()

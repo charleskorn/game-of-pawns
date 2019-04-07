@@ -1,4 +1,4 @@
-package com.charleskorn.shokunin.gameofpawns
+package com.charleskorn.shokunin.gameofpawns.model
 
 enum class Piece(val abbreviation: String) {
     King("K"),

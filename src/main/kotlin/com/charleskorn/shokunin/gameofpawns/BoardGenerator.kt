@@ -1,5 +1,10 @@
 package com.charleskorn.shokunin.gameofpawns
 
+import com.charleskorn.shokunin.gameofpawns.model.Board
+import com.charleskorn.shokunin.gameofpawns.model.Coordinates
+import com.charleskorn.shokunin.gameofpawns.model.OccupiedSquare
+import com.charleskorn.shokunin.gameofpawns.model.Piece
+import com.charleskorn.shokunin.gameofpawns.model.Player
 import java.util.Random
 
 class BoardGenerator(private val random: Random = Random()) {
