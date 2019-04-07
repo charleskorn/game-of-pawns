@@ -2,4 +2,4 @@ language: java
 
 install: skip
 
-script: ./go.sh --grid
+script: ./gradlew check && ./go.sh --grid
