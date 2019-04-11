@@ -29,7 +29,7 @@ class BoardGenerator(private val random: Random = Random()) {
             }
 
     private fun addPiecesToBoardForPlayer(startingBoard: Board, rule: PieceGenerationRule, player: Player, usedCoordinates: MutableSet<Coordinates>): Board {
-        val count = rule.minimumRequired + random.nextInt(rule.maximumAllowed - rule.minimumRequired + 1)
+        val count = randomValueInRange(rule.minimumRequired, rule.maximumAllowed)
 
         return (1..count)
                 .fold(startingBoard) { board, _ ->
@@ -40,7 +40,9 @@ class BoardGenerator(private val random: Random = Random()) {
                 }
     }
 
-    private fun nextRandomCoordinates(): Coordinates = Coordinates(random.nextInt(8), random.nextInt(8))
+    private fun randomValueInRange(min: Int, max: Int): Int = min + random.nextInt(max - min + 1)
+
+    private fun nextRandomCoordinates(): Coordinates = Coordinates(randomValueInRange(0, 7), randomValueInRange(0, 7))
 
     private fun nextRandomCoordinates(predicate: (Coordinates) -> Boolean): Coordinates {
         while (true) {
